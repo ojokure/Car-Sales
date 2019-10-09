@@ -17,17 +17,17 @@ const initialState = {
   ]
 };
 
-export function storeReducer(state = initialState, action) {
+export function stockReducer(stock = initialState, action) {
   switch (action.type) {
     case types.ADD_FEATURE:
       return {
-        ...state
+        ...stock
       };
     case types.REMOVE_FEATURE:
       return {
-          
+
       };
     default:
-      return state;
+      return stock;
   }
 }
