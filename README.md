@@ -72,7 +72,7 @@ write the reducer logic for the actions 👉 Rinse and repeat
 - Set up the Redux flow
 - User should be able to add features to their car
 - User should be able to remove added features from their car
-- Total should update as user adds and removes features from their car
+- Total updates as user adds and removes features from their car
 
 ## Stretch Problems
 
