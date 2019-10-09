@@ -1,12 +1,13 @@
 import React from "react";
 import { combineReducers, createStore } from "redux";
-import { Provider } from "react-redux";
+import { connect } from "react-redux";
 import Header from "./components/Header";
 import AddedFeatures from "./components/AddedFeatures";
 import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
+import * as actionCreators from "./actionCreators";
 
-const App = () => {
+export const App = props => {
   const removeFeature = item => {
     // dispatch an action here to remove an item
   };
@@ -18,16 +19,23 @@ const App = () => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={state.car} />
-        <AddedFeatures car={state.car} />
+        <Header/>
+        <AddedFeatures />
       </div>
       <div className="box">
-        <AdditionalFeatures store={state.store} />
-        <Total car={state.car} additionalPrice={state.additionalPrice} />
-        
+        <AdditionalFeatures  />
+        <Total />
       </div>
     </div>
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    state : state
+  }
+}
+export default connect(
+  mapStateToProps,
+  actionCreators
+)(App);

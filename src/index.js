@@ -12,7 +12,10 @@ const superReducer = combineReducers({
   stock: reducers.stockReducer
 });
 
-const store = createStore(superReducer);
+const store = createStore(
+  superReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(

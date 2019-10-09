@@ -1,6 +1,9 @@
 import React from 'react';
+import { connect } from "react-redux";
+import * as actionCreators from "../actionCreators";
 
-const AdditionalFeature = props => {
+
+export const AdditionalFeature = props => {
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
