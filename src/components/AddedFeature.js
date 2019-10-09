@@ -4,22 +4,18 @@ import * as actionCreators from "../actionCreators";
 
 
 
-export const AddedFeature = stock => {
+export const AddedFeature = props => {
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
-      <button className="button">X</button>
-      {stock.feature.name}
+      <button className="button" onClick={()=>props.removeFeature(props.feature)}>X</button>
+      {props.feature.name}
     </li>
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    stock: state.stock
-  };
-};
+
 export default connect(
-  mapStateToProps,
+  state => state,
   actionCreators
 )(AddedFeature);

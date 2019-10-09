@@ -28,7 +28,13 @@ export function stockReducer(state = initialState, action) {
         }
       };
     case types.REMOVE_FEATURE:
-      return {};
+      return {
+        ...state, 
+        car: {
+          ...state.car, 
+          features: [...state.car.features.filter(el => el.id !== action.payload.id)]
+        }
+      };
     default:
       return state;
   }
