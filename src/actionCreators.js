@@ -13,9 +13,3 @@ export function removeFeature(item) {
     payload: item
   };
 }
-
-export function addTotal(){
-    return{
-        type:types.ADD_TOTAL,
-    }
-}

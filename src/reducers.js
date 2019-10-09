@@ -24,7 +24,8 @@ export function stockReducer(state = initialState, action) {
         ...state,
         car: {
           ...state.car,
-          features: [...state.car.features.concat(action.payload)]
+          features: [...state.car.features.concat(action.payload)],
+          price : state.car.price + action.payload.price
         }
       };
     case types.REMOVE_FEATURE:
@@ -32,15 +33,12 @@ export function stockReducer(state = initialState, action) {
         ...state, 
         car: {
           ...state.car, 
-          features: [...state.car.features.filter(el => el.id !== action.payload.id)]
+          features: [...state.car.features.filter(el => el.id !== action.payload.id)],
+          price : state.car.price - action.payload.price
+
         }
       };
-      case types.ADD_TOTAL:
-        return{
-          ...state, store: { ...state.feature.reduce()
-            // .reduce((acc, feature) => acc + feauture.price, car.price)
-          }
-        }
+     
     default:
       return state;
   }
