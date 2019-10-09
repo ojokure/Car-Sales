@@ -5,6 +5,7 @@ import * as actionCreators from "../actionCreators";
 export const Total = ({ stock:{car, additionalPrice} }) => {
   return (
     <div className="content">
+      car.features.length ? 
       <h4>Total Amount: ${car.price + additionalPrice}</h4>
     </div>
   );

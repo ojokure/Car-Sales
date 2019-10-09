@@ -35,6 +35,12 @@ export function stockReducer(state = initialState, action) {
           features: [...state.car.features.filter(el => el.id !== action.payload.id)]
         }
       };
+      case types.ADD_TOTAL:
+        return{
+          ...state, store: { ...state.feature.reduce()
+            // .reduce((acc, feature) => acc + feauture.price, car.price)
+          }
+        }
     default:
       return state;
   }
