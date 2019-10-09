@@ -8,13 +8,13 @@ import Total from "./components/Total";
 import * as actionCreators from "./actionCreators";
 
 export const App = props => {
-  const removeFeature = item => {
-    // dispatch an action here to remove an item
-  };
+  // const removeFeature = item => {
+  //   // dispatch an action here to remove an item
+  // };
 
-  const addFeature = item => {
-    // dipsatch an action here to add an item
-  };
+  // const addFeature = item => {
+  //   // dipsatch an action here to add an item
+  // };
 
   return (
     <div className="boxes">

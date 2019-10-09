@@ -21,12 +21,14 @@ export function stockReducer(state = initialState, action) {
   switch (action.type) {
     case types.ADD_FEATURE:
       return {
-        ...state
+        ...state,
+        car: {
+          ...state.car,
+          features: [...state.car.features.concat(action.payload)]
+        }
       };
     case types.REMOVE_FEATURE:
-      return {
-
-      };
+      return {};
     default:
       return state;
   }
