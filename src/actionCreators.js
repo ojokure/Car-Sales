@@ -8,9 +8,14 @@ export function addFeature(item) {
 }
 
 export function removeFeature(item) {
-    debugger
   return {
     type: types.REMOVE_FEATURE,
     payload: item
   };
+}
+
+export function addTotal(){
+    return{
+        type:types.ADD_TOTAL,
+    }
 }
